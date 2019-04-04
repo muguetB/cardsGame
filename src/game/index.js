@@ -29,9 +29,6 @@ class Game extends PureComponent<{}, State> {
         axios.get('https://deckofcardsapi.com/api/deck/new/draw/?count=1')
             .then(
             response => {
-                this.setState(prevState => {
-                    console.log('prevState', prevState);
-                })
                this.setState({
                    card: response.data.cards[0],
                    error: false
